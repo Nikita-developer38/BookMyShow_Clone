@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <title>Stree 2 : Movie</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .hline {
+            width: 550px;
+            height: 1px;
+            background-color: #7f7f7f;
+
+            margin: 20px;
+
+        }
+
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+            <a class="navbar-brand fw-bold" href="#">Book<span class="text-danger">My</span>Show</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./dashboard.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./login.html">Log In</a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <button aria-label=".." class="btn btn-danger bg-light text-dark ms-3" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                Hi, Guest </button>
+
+        </div>
+    </nav>
+
+    <!-- **************************************** offcanvas************************ -->
+
+
+
+
+
+    <div class="offcanvas offcanvas-end" style="width: 30%;" tabindex="-1" id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Hey!</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body text-start  ">
+            <div class="d-flex flex-row justify-content-evenly align-center py-1 px-2 shadow-sm border-top "> <img
+                    alt=".." src="https://in.bmscdn.com/webin/movies/superstar/rewards_login.png">
+                <div>
+                    Unlock Special Offers & great benefits
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline-danger text-wrap">Offers</button>
+                </div>
+            </div>
+            <ul class=" ">
+                <li class="py-2 w-100 d-flex flex-row justify-content-start  border-bottom pb-4 text-center"><a class=""
+                        href="#"><i class="fa-regular fa-bell"></i> Notifications</a>
+                </li>
+                <li class="py-2 border-bottom d-flex flex-row justify-content-between text-start pb-4 opacity-50"><a
+                        class=" active" href="#"><i class="fa-solid fa-bag-shopping"></i>Your
+                        Orders<i class="fa-solid fa-lock"></i></a>
+                </li>
+                <li class="py-2  border-bottom   text-start pb-4 opacity-50" disabled><a class="disabled" href="#"><i
+                            class="fa-regular fa-circle-play" disabled></i>Stream Library
+                        <i class="fa-solid fa-lock"></i></a>
+                </li>
+                <li class="py-2  border-bottom  my-2 pb-4 text-start"><a class="" href="#"><i
+                            class="fa-solid fa-indian-rupee-sign"></i>Play
+                        Credit Card</a></li>
+                <li class="py-2 border-bottom pb-4  text-start"><a class=" active" href="#"><i
+                            class="fa-solid fa-comment-dots"></i>Help & Support</a>
+                </li>
+                <li class="py-2 border-bottom pb-4 text-start opacity-50"><a class=" disabled" href="#"><i
+                            class="fa-solid fa-gear"></i>Accounts &
+                        Settings<i class="fa-solid fa-lock"></i></a>
+                </li>
+                <li class="py-2 border-bottom pb-4  text-start"><a class="" href="#"><i
+                            class="fa-solid fa-gift"></i>Rewards</a>
+                </li>
+                <li class="py-2  border-bottom pb-4 my-2 text-start"><a class="" href="#"><i
+                            class="fa-solid fa-clapperboard"></i>BookASmile</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- ****************************** offcanvas end***************************** -->
+    <!-- navbar end -->
+
+
+    <!-- Movie Details Poster -->
+    <div class="card bg-dark text-white">
+        <img src="https://www.bollywoodhungama.com/wp-content/uploads/2022/12/Stree-2-1.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay d-flex flex-row justify-content-between">
+            <img alt=".."
+                src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/stree-2-et00364249-1721725490.jpg">
+            <div class="d-flex flex-column">
+                <h1 class="card-title mb-3">Stree 2: Sarkate Ka Aatank</h1>
+                <div class="card-text p-3 rounded w-75 d-flex flex-row text-center align-self-center mb-2 align-item-center justify-content-evenly"
+                    style="background-color: #333333;">
+                    <div class="d-flex flex-row justify-content-between w-100">
+
+                        <div> <i class="fa-solid fa-star" style="color: #f07584;"></i></div>
+                        <div class="text-white fs-5">9.1/10</div>
+                        <div>( 177.1K Votes)</div>
+                        <div><i class="fa-solid fa-chevron-right"></i></div>
+
+                        <div>
+                            <button type="button" class="btn btn-light">Rate Now</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-row text-dark mx-5 mb-3">
+                    <div class="m-2 p-1 rounded" style="background-color: rgb(204, 201, 201);">
+                        2D
+                    </div>
+                    <div class="m-2 p-1 rounded" style="background-color: rgb(204, 201, 201);">Hindi</div>
+                </div>
+                <div class="d-flex flex-row mb-3" style="margin-left: 54px;">
+
+                    <p>2h 29m • Comedy, Horror • UA • 15 Aug, 2024</p>
+                </div>
+                <div style="margin-left: 6px;">
+                    <button type="button" class="btn btn-danger px-5 mx-5">Book Tickets</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- movie detail poster end -->
+
+
+    <div class="w-75 mx-5 my-4">
+        <div class="">
+            <div class="fs-3 fw-bold">
+                About the movie
+            </div>
+            <div class="fs-6 border-bottom pb-5 my-3">After the events of Stree, the town of Chanderi is being haunted
+                again.
+                This
+                time,
+                women
+                are
+                mysteriously abducted by a
+                terrifying headless entity. Once again, it`s up to Bicky and his friends to save their town and
+                loved
+                ones.</div>
+        </div>
+
+
+        <div>
+            <div class="fs-3 fw-bold w-75 ">
+                Cast
+            </div>
+            <div class="d-flex flex-row justify-content-between border-bottom py-5">
+                <div class="d-flex flex-column justify-content-center text-center">
+                    <img alt=".." class=" img-fluid  rounded-circle w-75 h-50 mx-2" style="object-fit: cover;"
+                        src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/rajkummar-rao-1043890-20-12-2017-03-34-28.jpg">
+                    <div class="fs-5  ">Rajkummar Rao</div>
+                    <div>as Vicky</div>
+                </div>
+                <div class="d-flex flex-column justify-content-center text-center">
+                    <img alt=".." class=" img-fluid rounded-circle w-75 h-50  mx-2"
+                        src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/shraddha-kapoor-23323-1676723901.jpg">
+                    <div class="fs-5">Shraddha Kapoor</div>
+                    <div>as Stree</div>
+                </div>
+                <div class="d-flex flex-column justify-content-center text-center">
+                    <img alt=".." class="rounded-circle img-fluid w-75 h-50  mx-2"
+                        src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/pankaj-tripathi-29809-23-03-2017-02-54-29.jpg">
+                    <div class="fs-5">Pankaj Tripathi</div>
+                    <div>as Rudra</div>
+                </div>
+                <div class="d-flex flex-column justify-content-center text-center">
+                    <img alt=".." class="rounded-circle img-fluid w-75 h-50 mx-2"
+                        src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/aparshakti-khurana-1077032-1705845871.jpg">
+                    <div class="fs-5">Aparshakti Khurana</div>
+                    <div>as Bittu</div>
+                </div>
+                <div class="d-flex flex-column justify-content-center text-center">
+                    <img alt=".." class="rounded-circle img-fluid w-75 h-50 mx-2"
+                        src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/abhishek-banerjee-1084840-08-08-2017-16-16-01.jpg">
+                    <div class="fs-5">Abhishek Banerjee</div>
+                    <div>as JD</div>
+                </div>
+                <div class="d-flex flex-column justify-content-center text-center">
+                    <img alt=".." class="rounded-circle img-fluid w-75 h-50 mx-2"
+                        src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/tamannaah-bhatia-16842-20-12-2017-04-21-12.jpg">
+                    <div class="fs-5">Tamnnaah Bhatia</div>
+                    <div>Actor</div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="fs-3 fw-bold pb-5 pt-3">
+                Crew
+            </div>
+            <div class="d-flex flex-row justify-content-between border-bottom pb-5">
+                <div class="d-flex flex-column justify-content-center text-center">
+                    <img alt=".." class="rounded-circle img-fluid w-75 h-75 mx-2"
+                        src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/amar-kaushik-iein008750-24-03-2017-14-02-49.jpg">
+                    <div class="fs-5">Amar Kaushik</div>
+                    <div>Director</div>
+                </div>
+                <div class="d-flex flex-column justify-content-center text-center">
+                    <img alt=".." class="rounded-circle img-fluid w-75 h-75 mx-2"
+                        src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/dinesh-vijan-1070169-02-05-2017-10-33-25.jpg">
+                    <div class="fs-5">Dinesh Vijan</div>
+                    <div>Producer</div>
+                </div>
+                <div class="d-flex flex-column justify-content-center text-center">
+                    <img alt=".." class="rounded-circle img-fluid w-75 h-75 mx-2"
+                        src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/jyoti-deshpande-2029268-1724071065.jpg">
+                    <div class="fs-5">Jyoti Deshpande</div>
+                    <div>Producer</div>
+                </div>
+                <div class="d-flex flex-column justify-content-center text-center">
+                    <img alt=".." class="rounded-circle img-fluid w-75 h-75 mx-2"
+                        src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/maddock-films-2038889-1721728602.jpg">
+                    <div class="fs-5">Maddock Films</div>
+                    <div>Producer</div>
+                </div>
+                <div class="d-flex flex-column justify-content-center text-center">
+                    <img alt=".." class="rounded-circle img-fluid w-75 h-75 mx-2"
+                        src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/jio-studios-2023260-1721728788.jpg">
+                    <div class="fs-5">Jio Studios</div>
+                    <div>Producer</div>
+                </div>
+                <div class="d-flex flex-column justify-content-center text-center">
+                    <img alt=".." class="rounded-circle img-fluid w-75 h-75 mx-2"
+                        src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/niren-bhatt-1047757-24-03-2017-14-17-17.jpg">
+                    <div class="fs-5">Niren Bhatt</div>
+                    <div>writer</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="pt-4">
+            <div class="d-flex flex-row justify-content-between">
+                <div class="fw-bold fs-3">Top Review</div>
+                <div class="text-danger">111.9K reviews
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="pt-2" style="color:#999999;">Summary of 111.9K reviews.</div>
+            <div class="d-flex flex-row flex-nowrap overflow-hidden ">
+                <div class="rounded-pill px-2 mx-1 py-1 border">
+                    <div class="text-nowrap text-danger"> #GreatActing <span class="text-dark "
+                            style="background-color:#dbd9d9 ;">67517</span></div>
+                </div>
+                <div class="rounded-pill px-2 mx-1 py-1 border">
+                    <div class="text-nowrap text-danger"> #BlockBuster <span class="text-dark "
+                            style="background-color:#dbd9d9 ;">62779</span></div>
+                </div>
+                <div class="rounded-pill px-2 mx-1 py-1 border">
+                    <div class="text-nowrap text-danger"> #SuperDirection <span class="text-dark "
+                            style="background-color:#dbd9d9 ;">58656</span></div>
+                </div>
+                <div class="rounded-pill px-2 mx-1 py-1 border">
+                    <div class="text-nowrap text-danger"> #AwesomeStory <span class="text-dark "
+                            style="background-color:#dbd9d9 ;">51003</span></div>
+                </div>
+                <div class="rounded-pill px-2 mx-1 py-1 border">
+                    <div class="text-nowrap text-danger"> #WellMade <span class="text-dark "
+                            style="background-color:#dbd9d9 ;">48060</span></div>
+                </div>
+                <div class="rounded-pill px-2 mx-1 py-1 border">
+                    <div class="text-nowrap text-danger"> #Rocking <span class="text-dark "
+                            style="background-color:#dbd9d9 ;">41628</span></div>
+                </div>
+                <div class="rounded-pill px-2 mx-1 py-1 border">
+                    <div class="text-nowrap text-danger"> #Rocking <span class="text-dark "
+                            style="background-color:#dbd9d9 ;">41628</span></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="my-5 d-flex flex-row">
+            <div class="border d-flex flex-column me-4   p-4 rounded-3">
+
+                <div class="d-flex flex-row justify-content-between text-center">
+                    <div class="d-flex justify-content-center   flex-row">
+                        <img src="https://in.bmscdn.com/in/synopsis-new/noimguser.jpg" alt="..">
+                        <div class="text-center d-flex justify-content-center">
+                            <p class="text-center mt-3 ">Manish</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row text-center mt-3 justify-content-center">
+                        <div> <i class="fa-solid fa-star" style="color: #f2546c;"></i></div>
+                        <div>9/10</div>
+                    </div>
+                </div>
+                <div class="text-justify">
+                    <div class="fw-bold">#SuperDirection #GreatActing #AwesomeStory #....</div>
+                    <div>
+                        i didn't feel that stree 1 was released 6 years ago, The director has continued the movie where
+                        he left 6 years ago.
+                        everyone's look was exactly like <span class="text-danger">...more</span></div>
+                </div>
+                <div class="d-flex flex-row text-center pt-2 justify-content-between">
+                    <div class="d-flex text-center  justify-content-between flex-row">
+                        <div class="me-1"><i class="fa-regular fa-thumbs-up"></i></div>
+                        <div class="text-center me-5">4.4K</div>
+                        <div class="me-2"> <i class="fa-regular fa-thumbs-down"></i></div>
+                    </div>
+                    <div class="d-flex text-center justify-content-between flex-row">
+                        <div class="text-center me-4"> 6 Days ago</div>
+                        <div> <i class="fa-solid fa-share-nodes"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border d-flex flex-column   p-4 rounded-3">
+
+                <div class="d-flex flex-row justify-content-between text-center">
+                    <div class="d-flex justify-content-center   flex-row">
+                        <img src="https://in.bmscdn.com/in/synopsis-new/noimguser.jpg" alt="..">
+                        <div class="text-center d-flex justify-content-center">
+                            <p class="text-center mt-3 ">User</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row text-center mt-3 justify-content-center">
+                        <div> <i class="fa-solid fa-star" style="color: #f2546c;"></i></div>
+                        <div>8.5/10</div>
+                    </div>
+                </div>
+                <div class="text-justify">
+                    <div class="fw-bold">#SuperDirection #GreatActing #AwesomeStory #....</div>
+                    <div>
+                        i didn't feel that stree 1 was released 6 years ago, The director has continued the movie where
+                        he left 6 years ago.
+                        everyone's look was exactly like <span class="text-danger">...more</span></div>
+                </div>
+                <div class="d-flex flex-row text-center pt-2 justify-content-between">
+                    <div class="d-flex text-center  justify-content-between flex-row">
+                        <div class="me-1"><i class="fa-regular fa-thumbs-up"></i></div>
+                        <div class="text-center me-5">3.2K</div>
+                        <div class="me-2"> <i class="fa-regular fa-thumbs-down"></i></div>
+                    </div>
+                    <div class="d-flex text-center justify-content-between flex-row">
+                        <div class="text-center me-4"> 9 Days ago</div>
+                        <div> <i class="fa-solid fa-share-nodes"></i></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+    </div>
+
+
+    <div class="mx-5 pb-3" style="font-size: 12px; color:#999999;">Online tickets
+        →
+        Movie tickets
+        →
+        Latest Movies
+        →
+        Stree 2: Sarkate Ka Aatank</div>
+    <div class="w-100" style="background-color:#f2f2f2; height: 30px;">
+
+    </div>
+
+    <!-- footer start -->
+    <!-- 1st div  -->
+    <div class="px-5  py-3 d-flex flex-row text-light align-items-center justify-content-around"
+        style="background-color: #313035;">
+        <img alt="img" src="https://in.bmscdn.com/webin/common/icons/hut.svg">
+        <div class="me-2 fw-bold">List Your Show</div>
+        <div>Got a show, event, activity or a great experience? Partner with us & get Listed on BookMyShow</div>
+        <div class="mx-5"> <button type="button" class="btn btn-danger d-flex mx-5 justify-content-end">Contact
+                Today !</button>
+        </div>
+    </div>
+    <!-- 1st div end -->
+    <!-- 2nd div start -->
+    <div class=" px-2 py-3 " style="background-color: #404043; height: 100px;">
+        <div class="d-flex flex-row justify-content-evenly align-item-center">
+            <div class="d-flex flex-column h-100 justify-content-center ">
+                <div><i class="fa-solid fa-headset fa-2xl" style="color: #7f7f7f;"></i></div>
+                <div class="" style="color: #7f7f7f;">24/7 CUSTOMER CARE</div>
+            </div>
+            <div class="d-flex flex-column">
+                <div><i class="fa-solid fa-ticket fa-2xl" style="color: #7f7f7f;"></i></div>
+                <div style="color: #7f7f7f;">RESEND BOOKING CONFIRMATION</div>
+            </div>
+            <div class="d-flex flex-column">
+                <div> <i class="fa-solid fa-envelope-open-text fa-2xl" style="color: #7f7f7f;"></i></div>
+                <div style="color: #7f7f7f;">SUBSCRIBE TO THE NEWSLETTER</div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 2nd div end -->
+    <!--3rd div start  -->
+    <div style="background-color: #333338;">
+        <div class="mb-1 mx-5">
+            <div class="mb-4  " style="color: #7f7f7f; font-size: 12px;">Movies Now Showing in Mumbai</div>
+            <div class="d-flex flex-row mb-4">
+                <a href="" class="mx-1 fw-5 text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Stree
+                    2: Sarkate
+                    Ka
+                    Aatank</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Alien:
+                    Romulus</a>
+                <div class="pe-1 mx-2 my-1 " style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1 text-decoration-none text-nowrap" style="color: #7f7f7f; font-size: 11px;">Khel
+                    Khel Mein</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Vedaa</a>
+                <div class="pe-1  mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f; font-size: 11px;">It
+                    Ends with
+                    Us</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Fakt
+                    Purusho
+                    Maate</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Laila
+                    Majnu</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Harold
+                    and the
+                    Purple
+                    Crayon</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f;font-size: 11px;">Deadpool &
+                    Wolverine</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+            </div>
+        </div>
+
+
+        <div class="mb-1 mx-5">
+            <div class="mb-4  " style="color: #7f7f7f; font-size: 12px;">EVENTS IN TOP CITIES</div>
+            <div class="d-flex flex-row mb-4">
+                <a href="" class="mx-3 fw-5 text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Stree
+                    2: Sarkate
+                    Ka
+                    Aatank</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Alien:
+                    Romulus</a>
+                <div class="pe-1 mx-2 my-1 " style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1 text-decoration-none text-nowrap" style="color: #7f7f7f; font-size: 11px;">Khel
+                    Khel Mein</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Vedaa</a>
+                <div class="pe-1  mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f; font-size: 11px;">It
+                    Ends with
+                    Us</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Fakt
+                    Purusho
+                    Maate</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Laila
+                    Majnu</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Harold
+                    and the
+                    Purple
+                    Crayon</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f;font-size: 11px;">Deadpool &
+                    Wolverine</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+
+            </div>
+        </div>
+
+
+        <div class=" mx-5">
+            <div class="mb-4  " style="color: #7f7f7f; font-size: 12px;">CINEMAS IN TOP CITIES</div>
+            <div class="d-flex flex-row mb-4">
+                <a href="" class="mx-1 fw-5 text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Stree
+                    2: Sarkate
+                    Ka
+                    Aatank</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Alien:
+                    Romulus</a>
+                <div class="pe-1 mx-2 my-1 " style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1 text-decoration-none text-nowrap" style="color: #7f7f7f; font-size: 11px;">Khel
+                    Khel Mein</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Vedaa</a>
+                <div class="pe-1  mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f; font-size: 11px;">It
+                    Ends with
+                    Us</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Fakt
+                    Purusho
+                    Maate</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Laila
+                    Majnu</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Harold
+                    and the
+                    Purple
+                    Crayon</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f;font-size: 11px;">Deadpool &
+                    Wolverine</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+            </div>
+        </div>
+
+        <div class=" mx-5">
+            <div class="mb-4  " style="color: #7f7f7f; font-size: 12px;">ACTIVITIES IN TOP CITIES</div>
+            <div class="d-flex flex-row mb-4">
+                <a href="" class="mx-1 fw-5 text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Stree
+                    2: Sarkate
+                    Ka
+                    Aatank</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Alien:
+                    Romulus</a>
+                <div class="pe-1 mx-2 my-1 " style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1 text-decoration-none text-nowrap" style="color: #7f7f7f; font-size: 11px;">Khel
+                    Khel Mein</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Vedaa</a>
+                <div class="pe-1  mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f; font-size: 11px;">It
+                    Ends with
+                    Us</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Fakt
+                    Purusho
+                    Maate</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Laila
+                    Majnu</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Harold
+                    and the
+                    Purple
+                    Crayon</a>
+                <div class="pe-1 mx-2 my-1" style="background-color:#7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f;font-size: 11px;">Deadpool &
+                    Wolverine</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+            </div>
+        </div>
+
+        <div class="mb-1 mx-5">
+            <div class="mb-4  " style="color: #7f7f7f; font-size: 12px;">EVENTS IN TOP CITIES</div>
+            <div class="d-flex flex-row mb-4">
+                <a href="" class="mx-3 fw-5 text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Stree
+                    2: Sarkate
+                    Ka
+                    Aatank</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Alien:
+                    Romulus</a>
+                <div class="pe-1 mx-2 my-1 " style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1 text-decoration-none text-nowrap" style="color: #7f7f7f; font-size: 11px;">Khel
+                    Khel Mein</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Vedaa</a>
+                <div class="pe-1  mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f; font-size: 11px;">It
+                    Ends with
+                    Us</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Fakt
+                    Purusho
+                    Maate</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Laila
+                    Majnu</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Harold
+                    and the
+                    Purple
+                    Crayon</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f;font-size: 11px;">Deadpool &
+                    Wolverine</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+            </div>
+        </div>
+
+
+        <div class=" mx-5">
+            <div class="mb-4  " style="color: #7f7f7f; font-size: 12px;">CINEMAS IN TOP CITIES</div>
+            <div class="d-flex flex-row mb-4">
+                <a href="" class="mx-1 fw-5 text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Stree
+                    2: Sarkate
+                    Ka
+                    Aatank</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Alien:
+                    Romulus</a>
+                <div class="pe-1 mx-2 my-1 " style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1 text-decoration-none text-nowrap" style="color: #7f7f7f; font-size: 11px;">Khel
+                    Khel Mein</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Vedaa</a>
+                <div class="pe-1  mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f; font-size: 11px;">It
+                    Ends with
+                    Us</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Fakt
+                    Purusho
+                    Maate</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Laila
+                    Majnu</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Harold
+                    and the
+                    Purple
+                    Crayon</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f;font-size: 11px;">Deadpool &
+                    Wolverine</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+            </div>
+        </div>
+
+        <div class=" mx-5">
+            <div class="mb-4  " style="color: #7f7f7f; font-size: 12px;">ACTIVITIES IN TOP CITIES</div>
+            <div class="d-flex flex-row mb-4">
+                <a href="" class="mx-1 fw-5 text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Stree
+                    2: Sarkate
+                    Ka
+                    Aatank</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Alien:
+                    Romulus</a>
+                <div class="pe-1 mx-2 my-1 " style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1 text-decoration-none text-nowrap" style="color: #7f7f7f; font-size: 11px;">Khel
+                    Khel Mein</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f; font-size: 11px;">Vedaa</a>
+                <div class="pe-1  mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f; font-size: 11px;">It
+                    Ends with
+                    Us</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Fakt
+                    Purusho
+                    Maate</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Laila
+                    Majnu</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap" style="color: #7f7f7f;font-size: 11px;">Harold
+                    and the
+                    Purple
+                    Crayon</a>
+                <div class="pe-1 mx-2 my-1" style="background-color:#7f7f7f;"></div>
+                <a href="" class="mx-1  text-decoration-none text-nowrap"
+                    style="color: #7f7f7f;font-size: 11px;">Deadpool &
+                    Wolverine</a>
+                <div class="pe-1 mx-2 my-1" style="background-color: #7f7f7f;"></div>
+            </div>
+        </div>
+
+        <!-- 3rd div end -->
+        <!-- bookmyshow -->
+        <div class="d-flex flex-row justify-content-center align-item-center pb-5">
+            <div class="hline"></div>
+            <div class="d-flex justify-content-center align-item-center"> <img alt="..."
+                    src="https://in.bmscdn.com/webin/common/icons/logo.svg">
+            </div>
+            <div class="hline"></div>
+        </div>
+        <!-- bookmyshow end -->
+    </div>
+    <!-- footer end -->
+
+
+</body>
+
+</html>
