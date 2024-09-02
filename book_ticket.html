@@ -27,6 +27,33 @@
         li {
             list-style: none;
         }
+
+        #num-color {
+            cursor: pointer;
+            border-radius: 50%;
+
+
+        }
+
+        #num-color:hover {
+            background-color: #f84468;
+
+        }
+
+        #num {
+            cursor: pointer;
+
+        }
+
+        #showtime {
+            cursor: pointer;
+
+        }
+
+        #showtime:hover {
+            background-color: #49ba8e;
+            color: white;
+        }
     </style>
 </head>
 
@@ -288,16 +315,16 @@
                                     400053, India
                                 </div>
                                 <div>
-                                    <span class="material-symbols-outlined">
+                                    <span class="material-symbols-outlined text-primary">
                                         near_me
                                     </span>
                                 </div>
                             </div>
                             <div>
-                                <div>
+                                <div class="d-flex flex-row justify-content-start fw-bold mb-3">
                                     Available Facilities
                                 </div>
-                                <div class="d-flex flex-row justify-content-between">
+                                <div class="d-flex flex-row justify-content-around">
                                     <div class="">
                                         <div><span class="material-symbols-outlined">
                                                 fastfood
@@ -345,11 +372,118 @@
 
 
             <div class="d-flex flex-row justify-content-start flex-grow-1">
-                <div class=" text-center rounded me-2 p-1"
+                <div class=" text-center rounded me-2 p-1" data-bs-toggle="modal" data-bs-target="#exampleModal"
                     style="color: #4abd5d; font-size:13px ; border:1px solid rgb(196, 193, 193)">
                     <div>04:10 PM</div>
                     <div>DOLBY ATOMS</div>
                 </div>
+                <!-- onclick show time start -->
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header text-center align-center">
+                                <h5 class="modal-title" id="exampleModalLabel">How Many Seats?</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body ">
+                                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/5359dd66658607.5b1e099b73523.gif"
+                                    alt="GIF"
+                                    class="w-100 h-50 text-center d-flex justify-content-center align-items-center align-self-center">
+                                <div class="d-flex flex-row justify-content-evenly pb-3">
+                                    <div class="text-center " id="num-color" style="width:24px; height: 24px;">
+                                        <div class="" id="num">1</div>
+                                    </div>
+                                    <div class="text-center " id="num-color" style="width:24px; height: 24px;">
+                                        <div class="" id="num">2</div>
+                                    </div>
+                                    <div class="text-center " id="num-color" style="width:24px; height: 24px;">
+                                        <div class="" id="num">3</div>
+                                    </div>
+                                    <div class="text-center " id="num-color" style="width:24px; height: 24px;">
+                                        <div class="" id="num">4</div>
+                                    </div>
+                                    <div class="text-center " id="num-color" style="width:24px; height: 24px;">
+                                        <div class="" id="num">5</div>
+                                    </div>
+                                    <div class="text-center " id="num-color" style="width:24px; height: 24px;">
+                                        <div class="" id="num">6</div>
+                                    </div>
+                                    <div class="text-center " id="num-color" style="width:24px; height: 24px;">
+                                        <div class="" id="num">7</div>
+                                    </div>
+                                    <div class="text-center " id="num-color" style="width:24px; height: 24px;">
+                                        <div class="" id="num">8</div>
+                                    </div>
+                                    <div class="text-center " id="num-color" style="width:24px; height: 24px;">
+                                        <div class="" id="num">9</div>
+                                    </div>
+                                    <div class="text-center " id="num-color" style="width:24px; height: 24px;">
+                                        <div class="" id="num">10</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="d-flex flex-row justify-content-between w-100">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <div>
+                                            NORMAL
+                                        </div>
+                                        <div class="fw-bold">
+                                            Rs. 280
+                                        </div>
+                                        <div style="color: #4abd5d;">
+                                            Available
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <div>
+                                            EXECUTIVE
+
+                                        </div>
+                                        <div class="fw-bold">
+                                            Rs. 300
+                                        </div>
+                                        <div style="color: #4abd5d;">
+                                            Available
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <div>
+                                            PREMIUM
+
+
+
+                                        </div>
+                                        <div class="fw-bold">
+                                            Rs. 320
+                                        </div>
+                                        <div style="color: #ffc610; ">
+                                            Filling Fast
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <div>
+                                            VIP
+                                        </div>
+                                        <div class="fw-bold">
+                                            Rs. 520
+                                        </div>
+                                        <div style="color: #4abd5d;">
+                                            Available
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn w-100 m-4 text-white" style="background-color: #f84468;"
+                                    data-bs-toggle="modal" data-bs-target="#fullScreen">Select
+                                    Seats</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- onclick showtime end -->
                 <div class=" text-center rounded me-2 p-1"
                     style="color: #4abd5d; font-size:13px ; border:1px solid rgb(196, 193, 193)">
                     <div>04:10 PM</div>
@@ -825,6 +959,322 @@
     </div>
 
     <!-- *********************** -->
+
+
+
+
+    <!-- full screen modal start -->
+
+    <!-- Full screen modal -->
+
+
+    <div class="modal bg-light" id="fullScreen" tabindex="1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <nav class="navbar fixed-top navbar-light bg-light d-flex flex-row ">
+                        <div class="container-fluid d-flex flex-column">
+                            <a class="navbar-brand d-flex flex-row" href="#">Stree 2: Sarkate Ka Aatank - Hindi
+                                <div class="rounded border text-center" style="font-size: 12px;">
+                                    UA
+                                </div>
+                            </a>
+                            <div class="fw-bold" style="font-size: 12px;">Cinepolis:Republic Mall, Andheri(W) | Today, 1
+                                sep , 01:05 PM</div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+
+                            <button type="button" class="btn-close text-center " data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+
+
+                        <div class="container-fluid d-flex flex-row">
+                            <div class="d-flex flex-row justify-content-evenly w-75">
+                                <div class="" style="color: rgb(221, 220, 220);"><i
+                                        class="fa-solid fa-chevron-left "></i></div>
+                                <div class="rounded text-center" id='showtime'
+                                    style="border:1px solid #49ba8e; font-size: 12px;">
+                                    03:10 <br> DOLBY
+                                    ATOMS</div>
+                                <div class="rounded text-center" id='showtime'
+                                    style="border:1px solid #49ba8e; font-size: 12px;">
+                                    03:10 <br> DOLBY
+                                    ATOMS</div>
+                                <div class="rounded text-center" id='showtime'
+                                    style="border:1px solid #49ba8e; font-size: 12px;">
+                                    03:10 <br> DOLBY
+                                    ATOMS</div>
+                                <div class="rounded text-center" id='showtime'
+                                    style="border:1px solid #49ba8e; font-size: 12px;">
+                                    03:10 <br> DOLBY
+                                    ATOMS</div>
+                                <div class="rounded text-center" id='showtime'
+                                    style="border:1px solid #49ba8e; font-size: 12px;">
+                                    03:10 <br> DOLBY
+                                    ATOMS</div>
+                                <div class="rounded text-center" id='showtime'
+                                    style="border:1px solid #49ba8e; font-size: 12px;">
+                                    03:10 <br> DOLBY
+                                    ATOMS</div>
+                                <div class="rounded text-center" id='showtime'
+                                    style="border:1px solid #49ba8e; font-size: 12px;">
+                                    03:10 <br> DOLBY
+                                    ATOMS</div>
+                                <div class="rounded text-center" id='showtime'
+                                    style="border:1px solid #49ba8e; font-size: 12px;">
+                                    03:10 <br> DOLBY
+                                    ATOMS</div>
+                                <div class="rounded text-center" id='showtime'
+                                    style="border:1px solid #49ba8e; font-size: 12px;">
+                                    03:10 <br> DOLBY
+                                    ATOMS</div>
+                                <div class="" style="color: rgb(221, 220, 220);"><i
+                                        class="fa-solid fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="modal-body m-5 p-5">
+                    <div class="m-5 p-5">
+                        <div class="d-flex flex-row justify-content-between border-bottom pb-4">
+                            <div>
+                                <div>
+                                    VIP - RS.540
+                                </div>
+                                <div>
+                                    <div class="d-flex flex-row ">
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">1</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">2</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">3</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">4</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">5</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">6</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">7</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">8</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">9</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">10</div>
+
+                                    </div>
+                                    <div class="d-flex flex-row ">
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">1</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">2</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">3</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">4</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">5</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">6</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">7</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">8</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">9</div>
+                                        <div class="rounded m-1 p-1"
+                                            style="border:1px solid #49ba8e; width: 24px; height: 24px;">10</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    PRIMIUM - Rs.360
+                                </div>
+                                <div>
+                                    <div class="d-flex flex-row ">
+                                        <div class="p-1 rounded m-1 text-center align-item-center"
+                                            style="background-color: rgb(209, 209, 209); color: white; width:24px; height: 24px;">
+                                            1
+                                        </div>
+                                        <div class="p-1 rounded m-1 text-center align-item-center"
+                                            style="background-color: rgb(209, 209, 209); color: white; width:24px; height: 24px;">
+                                            2
+                                        </div>
+                                        <div class="p-1 rounded m-1 text-center align-item-center"
+                                            style="background-color: rgb(209, 209, 209); color: white; width:24px; height: 24px;">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row ">
+                                        <div class="p-1 rounded m-1 text-center align-item-center"
+                                            style="background-color: rgb(209, 209, 209); color: white; width:24px; height: 24px;">
+                                            1
+                                        </div>
+                                        <div class="p-1 rounded m-1 text-center align-item-center"
+                                            style="background-color: rgb(209, 209, 209); color: white; width:24px; height: 24px;">
+                                            2
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="d-flex flex-column">
+                            <div>
+                                PRIMIUM - Rs.360
+                            </div>
+                            <div class="d-flex flex-row justify-content-evenly mx-auto">
+                                <div class="d-flex justify-content-between me-5 pe-5">
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        1</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        2</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        3</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        4</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        5</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        6</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        7</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        8</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        9</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        10</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        11</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        12</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        13</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        14</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        15</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        16</div>
+                                </div>
+                                <div class="d-flex justify-content-between ms-5 ps-5">
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        17</div>
+                                    <div class="p-1 m-1 rounded"
+                                        style="width:24px; height: 24px; background-color: rgb(209, 209, 209); color: white;">
+                                        18</div>
+                                </div>
+
+                                <div class="d-flex flex-row " style="">
+                                    <div class="" style="">
+                                        <div class="d-flex flex-column" style="">
+                                            <div class="" style="">
+                                                <div class="" style="">1</div>
+                                                <div class="" style="">2</div>
+                                                <div class="" style="">3</div>
+                                                <div class="" style="">4</div>
+                                            </div>
+                                            <div class="" style="">
+                                                <div class="" style="">1</div>
+                                                <div class="" style="">2</div>
+                                                <div class="" style="">3</div>
+                                                <div class="" style="">4</div>
+                                            </div>
+
+                                        </div>
+                                        <div>
+                                            <div class="" style="">
+                                                <div class="" style="">5</div>
+                                                <div class="" style="">6</div>
+                                                <div class="" style="">7</div>
+                                                <div class="" style="">8</div>
+                                                <div class="" style="">9</div>
+                                                <div class="" style="">10</div>
+                                                <div class="" style="">11</div>
+                                                <div class="" style="">12</div>
+                                                <div class="" style="">13</div>
+                                                <div class="" style="">14</div>
+                                                <div class="" style="">15</div>
+                                                <div class="" style="">16</div>
+                                                <div class="" style="">17</div>
+                                                <div class="" style="">18</div>
+                                                <div class="" style="">19</div>
+                                                <div class="" style="">20</div>
+                                                <div class="" style="">21</div>
+
+                                            </div>
+                                            <div class="" style="">
+                                                <div class="" style="">5</div>
+                                                <div class="" style="">6</div>
+                                                <div class="" style="">7</div>
+                                                <div class="" style="">8</div>
+                                                <div class="" style="">9</div>
+                                                <div class="" style="">10</div>
+                                                <div class="" style="">11</div>
+                                                <div class="" style="">12</div>
+                                                <div class="" style="">13</div>
+                                                <div class="" style="">14</div>
+                                                <div class="" style="">15</div>
+                                                <div class="" style="">16</div>
+                                                <div class="" style="">17</div>
+                                                <div class="" style="">18</div>
+                                                <div class="" style="">19</div>
+                                                <div class="" style="">20</div>
+                                                <div class="" style="">21</div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="" style="">
+                                                <div class="" style="">22</div>
+                                                <div class="" style="">23</div>
+                                                <div class="" style="">24</div>
+                                                <div class="" style="">25</div>
+                                            </div>
+                                            <div class="" style="">
+                                                <div class="" style="">22</div>
+                                                <div class="" style="">23</div>
+                                                <div class="" style="">24</div>
+                                                <div class="" style="">25</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- full screen model end -->
 
 </body>
 
